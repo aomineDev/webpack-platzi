@@ -14,8 +14,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
+          'style-loader', // Inyecta los estilos en el css
+          'css-loader' // Interpreta los css
         ]
       }
     ]
