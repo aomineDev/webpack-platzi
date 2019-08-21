@@ -1,8 +1,5 @@
-// npm run build:dev -- -w
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack') // Importaction de webpack
 
 module.exports = {
   entry: {
@@ -13,14 +10,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: ('js/[name].js')
   },
-  devServer: {
-    index: 'index.html',
-    hot: true,
-    open: true,
-    port: 9000
-  },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.css$/,
         use: [
@@ -32,8 +28,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'WebPack-Dev-Server' 
-    }),
-    new webpack.HotModuleReplacementPlugin() // Instancia de webpack
+      title: 'Webpack - Babel' 
+    })
   ]
 }
