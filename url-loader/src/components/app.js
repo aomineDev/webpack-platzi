@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import data from '../../data.json'
 
 import Loader from './loader'
 
+import data from '../../data.json'
+
+import logo from '../images/platzi.png'
+import video from '../video/que-es-core.mp4'
+
 export default function App() {
   const [loaderList, setLoaderList] = useState([])
-  const arr = [1, 2, 3]
   function handleClick() {
     setLoaderList(data.loaders)
   }
@@ -14,6 +17,8 @@ export default function App() {
       <h1 className="title">
         Que linda aplicación hecha en React.js
       </h1>
+      <img src={logo} alt="logo" />
+      <video src={video} controls poster={logo} />
       <ul>
         {
           loaderList.map(e => 

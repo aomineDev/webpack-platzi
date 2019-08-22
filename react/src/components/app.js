@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import data from '../../data.json'
 
 import Loader from './loader'
 
+import data from '../../data.json'
+
 export default function App() {
   const [loaderList, setLoaderList] = useState([])
-  const arr = [1, 2, 3]
   function handleClick() {
     setLoaderList(data.loaders)
   }

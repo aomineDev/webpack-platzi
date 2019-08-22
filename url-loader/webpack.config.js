@@ -30,13 +30,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.jpg|png|gif|webp|woff|eot|ttf|svg|mp4|webm$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 90000,
+        test: /\.(png|jpg|gif|webp|woff|eot|ttf|svg|mp4|webm)$/,
+        use:  {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            }
           }
-        }
       }
     ]
   },
