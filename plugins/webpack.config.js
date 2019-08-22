@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     new MiniCSSExtractPlugin({ // Instancia la clase
       filename: 'css/[name].css' // Le da el nombre al archivo css
-    }) ,
+    }),
     new HtmlWebpackPlugin({
       title: 'Plugins' // Titulo del html
     })

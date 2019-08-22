@@ -7,11 +7,6 @@ module.exports = {
     contacto: path.resolve(__dirname, 'src/pages/contacto.js')
   },
   mode: 'production',
-  devServer: {
-    hot: true,
-    open: true,
-    port: 9000
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: ('js/[name].js')
