@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, 'src/js/index.js')
+    home: path.resolve(__dirname, 'src/index.js')
   },
   mode: 'development',
   devServer: {
@@ -28,12 +28,21 @@ module.exports = {
           'style-loader', 
           'css-loader'
         ]
+      },
+      {
+        test: /\.jpg|png|gif|webp|woff|eot|ttf|svg|mp4|webm$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 90000,
+          }
+        }
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack - Babel' 
+      template: path.resolve(__dirname, 'index.html')
     })
   ]
 }

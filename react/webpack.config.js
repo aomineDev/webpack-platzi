@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, 'src/js/index.js')
+    home: path.resolve(__dirname, 'src/index.js')
   },
   mode: 'development',
   devServer: {
@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack - Babel' 
+      template: path.resolve(__dirname, 'index.html')
     })
   ]
 }
