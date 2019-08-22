@@ -17,7 +17,9 @@
     "serve:prepro": "webpack-dev-server --config ./prepro-css/webpack.config.js",
     "build:prevent": "webpack --config ./prevent-duplication/webpack.config.js",
     "build:dll": "webpack --config ./dll/webpack.dll.config.js",
-    "build:prevent-fast": "webpack --config ./dll/webpack.config.js"
+    "build:prevent-fast": "webpack --config ./dll/webpack.config.js",
+    "build:dynamic-dll": "webpack --config ./dynamic-imports/webpack.dll.config.js",
+    "build:dynamic": "webpack --config ./dynamic-imports/webpack.config.js"
   },
   "keywords": [
     "webpack"
@@ -26,6 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
