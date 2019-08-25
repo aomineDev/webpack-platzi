@@ -44,8 +44,8 @@ class Header extends React.Component {
               alt="imagen de la conferencia"
               className="Banner__brand-logo"
             />
-            <span className="Banner__brand-title">Conference</span>
-            <span className="font-weight-bold pl-1">badges</span>
+            <span className="Banner__brand-title">@aomine1745</span>
+            <span className="font-weight-bold pl-1"> estuvo aqui :v</span>
           </Link>
         </div>
       </div>
