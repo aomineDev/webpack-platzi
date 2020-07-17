@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     home: path.resolve(__dirname, 'src/index.js'),
-    contacto: path.resolve(__dirname, 'src/pages/contacto.js')
+    contacto: path.resolve(__dirname, 'src/contacto.js')
   },
   mode: 'production',
   output: {
