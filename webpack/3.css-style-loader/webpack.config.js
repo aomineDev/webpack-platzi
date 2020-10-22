@@ -13,10 +13,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
+        use: [ // Los loaders se ejecutan de atras para adelante
           'style-loader', // Inyecta los estilos en el js
           'css-loader' // Interpreta los css
-        ]
+        ] // primero sera el css loader luego el style loader
       }
     ]
   }
